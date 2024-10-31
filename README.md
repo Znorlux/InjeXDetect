@@ -41,3 +41,6 @@ La respuesta de la API se guardará en un archivo classification.txt, donde "0" 
 
 ## Contribuciones
 Las contribuciones son completamente bienvenidas. Por favor, envía un pull request o abre un issue para discutir cambios, siempre es un gusto aprender.
+
+## Agradecimientos
+Fue importante la utilización de la libreria usb-monitor de https://github.com/Eric-Canas/USBMonitor
