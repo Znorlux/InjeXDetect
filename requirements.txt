@@ -6,3 +6,4 @@ requests==2.32.3
 urllib3==2.2.3
 usb-monitor==1.21
 WMI==1.5.1
+paho-mqtt

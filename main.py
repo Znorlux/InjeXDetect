@@ -4,7 +4,7 @@ import time
 import subprocess
 import os
 import requests
-
+from send_mqtt import send_classification_mqtt
 device_info_str = lambda device_info: f"{device_info[ID_MODEL]} ({device_info[ID_MODEL_ID]} - {device_info[ID_VENDOR_ID]})"
 
 # Define the `on_connect` and `on_disconnect` callbacks
@@ -46,13 +46,13 @@ def on_connect(device_id, device_info):
         print("Response from API:")
         response = response.json()
         print(response)
-        classification = response['result']
-        with open('classification.txt', 'w') as f:
-            if classification == "Human":
-                f.write("0")
-            else:
-                f.write("1")
-
+        #classification = response['result']
+        #with open('classification.txt', 'w') as f:
+        #    if classification == "Human":
+        #        f.write("0")
+        #    else:
+        #        f.write("1")
+        send_classification_mqtt(response['result'])
     
     except Exception as e:
         print(f"An error occurred: {e}")
