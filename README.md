@@ -38,7 +38,7 @@ Conecta un dispositivo USB. La aplicación detectará automáticamente la conexi
 
 Una vez finalizado el registro, el archivo key_log.csv se enviará a la API para su análisis.
 
-La respuesta de la API se guardará en un archivo classification.txt, donde "0" indica un dispositivo humano y "1" indica un dispositivo potencialmente malicioso.
+La respuesta de la API se mostrará en consola, pero tambien se enviará por mqtt a un esp32 suscripto al Topic "esp32/injexdetect", el cual podrá conocer el resultado del análisis 
 
 ## Contribuciones
 Las contribuciones son completamente bienvenidas. Por favor, envía un pull request o abre un issue para discutir cambios, siempre es un gusto aprender.
