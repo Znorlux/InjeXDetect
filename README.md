@@ -15,6 +15,7 @@ InjeXDetect es una aplicación diseñada para detectar dispositivos USB malicios
   - `usbmonitor`
   - `requests`
   - `pynput`
+  - `paho-mqtt`
   
 Puedes instalar los paquetes requeridos utilizando pip:
 
